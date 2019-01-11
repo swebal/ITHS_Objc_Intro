@@ -61,6 +61,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myTitleButton" destination="ys8-Bo-GWL" id="kHl-Ri-Oxk"/>
                         <outlet property="subTitleLabel" destination="fnD-uw-tak" id="fp1-xM-if5"/>
                         <outlet property="titleLabel" destination="Td6-4c-n3o" id="f0V-hF-SaG"/>
                     </connections>

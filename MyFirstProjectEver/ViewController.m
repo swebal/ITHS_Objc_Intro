@@ -97,32 +97,20 @@
     [self.view setBackgroundColor:[UIColor redColor]]; // Samma som raden ovan! (automatiska setters för properties
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     // Java syntax för att skapa ett nytt objekt
     // objekttyp variabelnamn = new objekttyp();
     
 }
 
 - (IBAction)titleButtonPressed:(UIButton *)sender {
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor greenColor];
     self.titleLabel.text = @"Hallå eller! Vad händer idag?";
 }
 
 - (IBAction)subTitleButtonPressed:(UIButton *)sender {
     self.view.backgroundColor = [UIColor redColor];
     self.subTitleLabel.text = @"Tryckte åp subtitle label";
+    [self.myTitleButton setTitle:@"Ny knapptext" forState:UIControlStateNormal];
 }
 
 @end
