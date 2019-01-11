@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MKBil : NSObject
+// @interface KLASS_NAMN : SUPER_KLASS
 
-@property (strong) NSNumber* numberOfWheels;
+@interface MKBil : NSObject {
+    int length;
+}
+
+@property (assign) NSInteger numberOfWheels;
 
 @end

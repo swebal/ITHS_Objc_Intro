@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "MKPerson.h"
 #import "MKBilVerkstad.h"
+#import "MKBil.h"
+
 @interface ViewController ()
 
 @end
@@ -19,6 +21,52 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    
+    
+    
+    // Array:er i Java
+    
+    // string[] myStringArray = new string[3](); - Motsvarar NSArray (kan ej ändra längd)
+    // myStringArray[0] = "Hej";
+    NSArray *array1 = [[NSArray alloc] initWithObjects:@"hej", @"på", @"dig", nil];
+    // string[] myStringArray = {"hej", "på", "dig"};
+    MKBil *b = [MKBil new];
+    NSArray *array2 = @[@"hej", b, @"dig"]; // Ekvivalent med raden ovanför
+    
+    NSString *hej = array2[0];
+    
+    NSLog(@"%@", hej);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // ArrayList<MKBil> minaBilar = new ArrayList(); - Array som du kan ändra längd och innehåll - NSMutableArray
+
+    NSMutableArray *aMutableArray = [NSMutableArray new];
+    
+    for (int i=0; i<10; i++) {
+        MKBil *b = [MKBil new];
+        b.numberOfWheels = i;
+        [aMutableArray addObject:b];
+    }
+    
+    for (MKBil *bil in aMutableArray) {
+        
+    }
+    
+//    for (int j=0; j<10; j++) {
+//        [aMutableArray removeLastObject];
+//    }
+    
+//
+//    NSDictionary *dict;
+//    NSMutableDictionary *mdict;
+//
     
     MKPerson *person = [MKPerson initWithName:@"Pelle" withAge:@(23)];
     
@@ -34,6 +82,8 @@
 //    verkstad.numberOfSpots = 4;
     verkstad.owner = person;
     
+    
+    MKBil *bil = [MKBil new];
     
     
     
